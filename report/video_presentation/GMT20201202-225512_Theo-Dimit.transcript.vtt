@@ -1,0 +1,166 @@
+WEBVTT
+
+1
+00:00:02.700 --> 00:00:18.390
+Theo Dimitrasopoulos: Hello everyone. Today I will be discussing evolutionary neural networks, which is a combination of artificial neural networks, which are trained using evolutionary algorithms specifically genetic algorithms.
+
+2
+00:00:21.600 --> 00:00:34.380
+Theo Dimitrasopoulos: The agenda for today includes a short description of artificial neural networks, then we proceed with a description of genetic neural networks, a description of the data that was used to
+
+3
+00:00:34.950 --> 00:00:50.760
+Theo Dimitrasopoulos: Perform the perform the analysis. A an overview of the results and that small discussion on those results. And finally, some next steps that can be developed in order to further the further the project.
+
+4
+00:00:55.200 --> 00:01:04.260
+Theo Dimitrasopoulos: So first I would like to describe artificial neural networks, which are essentially a list of inputs, which is where everything starts
+
+5
+00:01:04.650 --> 00:01:16.740
+Theo Dimitrasopoulos: That gets wasted and using an activation function. It just moves on through the success of layers until we get the predictive value that we are looking for.
+
+6
+00:01:18.210 --> 00:01:27.180
+Theo Dimitrasopoulos: We should be thinking about the successive functions activation functions that the data is going through as a composite function g
+
+7
+00:01:27.720 --> 00:01:40.020
+Theo Dimitrasopoulos: That takes him that inputs, the input vector and all of the separate weights and through successive operations using the same activation function in this case that sigmoid function.
+
+8
+00:01:42.210 --> 00:01:46.290
+Theo Dimitrasopoulos: We recalibrate the waits until we get the final predictive value.
+
+9
+00:01:47.640 --> 00:01:57.930
+Theo Dimitrasopoulos: In this sense, we should be thinking about a loss function that is described as such, and also the gradient descent that incorporates the same weights and the same input vector
+
+10
+00:02:01.980 --> 00:02:09.930
+Theo Dimitrasopoulos: Now when it comes to genetic neural networks, which is a twist to the traditional artificial neural network we
+
+11
+00:02:10.860 --> 00:02:24.060
+Theo Dimitrasopoulos: Instead of using weights as they come out of the different of the different layers. We use a successive operation of the genetic algorithm in order to reduce the
+
+12
+00:02:24.540 --> 00:02:35.880
+Theo Dimitrasopoulos: Operations within their separate layers and come up with fewer connections between them, and as such, fewer ways that we are going to be dealing with
+
+13
+00:02:38.010 --> 00:02:51.690
+Theo Dimitrasopoulos: The only difference here is that instead of using specific weights like wait, one in this case wait to wait three we use the results of the genetic algorithms operations, which I will be describing later in a demo.
+
+14
+00:02:52.830 --> 00:02:54.150
+Theo Dimitrasopoulos: We just use
+
+15
+00:02:55.350 --> 00:03:00.660
+Theo Dimitrasopoulos: The result to to to to come up with the final predictive bow.
+
+16
+00:03:02.130 --> 00:03:10.110
+Theo Dimitrasopoulos: For this analysis I use the Dow Jones Industrial index and I took approximately
+
+17
+00:03:12.030 --> 00:03:21.600
+Theo Dimitrasopoulos: 13 years of data. In this case, and using that I converted it came up with the daily change and it's those different values.
+
+18
+00:03:22.170 --> 00:03:38.250
+Theo Dimitrasopoulos: And from that I assigned a different signals based on that the daily changes the different signals are I sell and hold, which are indicated with the binary operators, one, zero, n minus one.
+
+19
+00:03:38.880 --> 00:04:00.810
+Theo Dimitrasopoulos: And the thresholds are in this case hard coded at approximately 5% of the change that is if a the daily change is 5% less than the previous day, then we will be selling if that changes anything less than that.
+
+20
+00:04:01.980 --> 00:04:13.800
+Theo Dimitrasopoulos: We will be holding and if the changes more than 5% positive in terms of stealing change and subsequently returns for this diversified quote unquote portfolio.
+
+21
+00:04:15.300 --> 00:04:19.050
+Theo Dimitrasopoulos: We will be buying more of the index.
+
+22
+00:04:23.130 --> 00:04:27.120
+Theo Dimitrasopoulos: There is all specifically for the genetic neural network.
+
+23
+00:04:28.410 --> 00:04:41.190
+Theo Dimitrasopoulos: Are as such I used them eBooks and each book is using. So, number of generations and proceeds until it just reaches a final value that
+
+24
+00:04:42.390 --> 00:04:46.380
+Theo Dimitrasopoulos: Could also be indicated, or could be left open so that it says
+
+25
+00:04:47.640 --> 00:04:53.460
+Theo Dimitrasopoulos: Stops when the gradient descent reaches a local, local maximum. In this case,
+
+26
+00:04:54.720 --> 00:05:17.250
+Theo Dimitrasopoulos: So the initial fitness score for for the different ways was point 52 and the best accuracy was also point 52 coincidentally, and then the fitness score generation 160 or the best accuracy at generation 160 reached point 81 or 81%
+
+27
+00:05:18.360 --> 00:05:35.430
+Theo Dimitrasopoulos: In comparison, the sequential neural network and simpler representation with the same amount of players and same structure as the genetic neural network, except for the procedure that we follow to generate these weights and to come up with these ways
+
+28
+00:05:36.570 --> 00:05:37.470
+Theo Dimitrasopoulos: Uses
+
+29
+00:05:38.520 --> 00:05:55.800
+Theo Dimitrasopoulos: 500 epochs, or this runs for 500 bucks and with the initial fitness score for that was on 26 and the final fitness floor where the best accuracy at the end of the at the end of that 500 several was 53%
+
+30
+00:05:57.000 --> 00:05:58.260
+Theo Dimitrasopoulos: So we see that
+
+31
+00:05:59.760 --> 00:06:10.620
+Theo Dimitrasopoulos: The procedure that we follow to generate the weights with genetic algorithms increase the best accuracy by more than 30%
+
+32
+00:06:16.140 --> 00:06:30.240
+Theo Dimitrasopoulos: In terms of next steps. This is a very simplified case of a full portfolio and again I will be repeating that the diversify this quote unquote
+
+33
+00:06:30.690 --> 00:06:44.130
+Theo Dimitrasopoulos: Portfolio. That includes only one industrial index at the moment. Ideally, we would be able to create a pipeline for entire stock portfolios that include multiple ETFs or multiple stocks and
+
+34
+00:06:44.970 --> 00:06:52.590
+Theo Dimitrasopoulos: Other different securities and we generate a signal based on portfolio returns in particular.
+
+35
+00:06:52.980 --> 00:07:03.810
+Theo Dimitrasopoulos: So that would involve generating the covariance matrix season generating the, the standard deviation of risk curves or efficient frontier so that we identify
+
+36
+00:07:04.200 --> 00:07:14.310
+Theo Dimitrasopoulos: The appropriate portfolios with the corresponding ways. Finally using those signals we would be reallocating portfolio awaits as opposed to
+
+37
+00:07:14.880 --> 00:07:31.140
+Theo Dimitrasopoulos: Simple by hold ourselves task as specified time intervals, depending on the direction of these weights and with this with these additional steps we will be able to automate portfolio management then be able to
+
+38
+00:07:32.430 --> 00:07:36.900
+Theo Dimitrasopoulos: maximize the return of a portfolio without necessarily
+
+39
+00:07:38.730 --> 00:07:41.040
+Theo Dimitrasopoulos: reallocating the ways manually.
+
+40
+00:07:45.000 --> 00:07:51.900
+Theo Dimitrasopoulos: This is it for a revolutionary neural networks using genetic algorithms. This is a presentation for
+
+41
+00:07:52.980 --> 00:08:07.290
+Theo Dimitrasopoulos: My class Stevens Institute of Technology. Every 690 machine learning in finance. My advisor was Zach Feinstein and I would like to thank Zach for for itself throughout the semester and
+
